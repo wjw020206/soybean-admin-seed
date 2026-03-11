@@ -46,5 +46,14 @@ export default defineConfig((configEnv) => {
     preview: {
       port: 9725,
     },
+    build: {
+      // 启用/禁用 gzip 压缩文件大小报告（禁用此功能可能会提高大型项目的构建性能）
+      reportCompressedSize: false,
+      sourcemap: viteEnv.VITE_SOURCE_MAP === 'Y',
+      commonjsOptions: {
+        // 不忽略 try...catch 中的 require()，确保这些依赖也能被正确解析和打包
+        ignoreTryCatch: false,
+      },
+    },
   }
 })
