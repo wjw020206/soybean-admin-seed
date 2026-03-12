@@ -5,8 +5,10 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 import { presetSoybeanAdmin } from '@sa/uno-preset'
+import type { Theme } from '@unocss/preset-wind3'
+import { themeVars } from './src/theme/vars'
 
-export default defineConfig({
+export default defineConfig<Theme>({
   // 可提取为实用工具使用情况的资源选项。
   content: {
     // 用于筛选是否从构建工具的转换管道中提取特定模块的过滤器
@@ -15,6 +17,7 @@ export default defineConfig({
     },
   },
   theme: {
+    ...themeVars,
     fontSize: {
       'icon-xs': '0.875rem', // 14px
       'icon-small': '1rem', // 16px

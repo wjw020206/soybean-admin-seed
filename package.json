@@ -21,6 +21,7 @@
     "@unocss/core": "^66.6.6",
     "@unocss/preset-wind3": "^66.6.6",
     "@sa/uno-preset": "workspace:*",
+    "@sa/color": "workspace:*",
     "@vitejs/plugin-vue": "^6.0.2",
     "@vue/tsconfig": "^0.8.1",
     "consola": "^3.4.2",
